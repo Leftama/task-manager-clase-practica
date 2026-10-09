@@ -28,6 +28,7 @@ on:
 env:
   JAVA_VERSION: '17'
   IMAGE_NAME: task-manager
+  APP_PORT: '8088'
 
 jobs:
 
@@ -163,11 +164,11 @@ jobs:
 
       - name: Verificar despliegue (Health Check)
         run: |
-          curl --fail --retry 5 --retry-delay 5 http://localhost:8088/actuator/health
+          curl --fail --retry 5 --retry-delay 5 http://localhost:${{ env.APP_PORT }}/actuator/health
 
       - name: Probar endpoint de tareas
         run: |
-          curl --fail http://localhost:8088/api/tasks
+          curl --fail http://localhost:${{ env.APP_PORT }}/api/tasks
 
       - name: Registrar trazabilidad del despliegue
         run: |
