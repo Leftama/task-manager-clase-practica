@@ -56,6 +56,6 @@ updates:
       # Las versiones 4 y 7 NO son compatibles entre sí.
       # Mientras el workflow use upload-artifact@v4, hay que bloquear download-artifact@v7.
       - dependency-name: "actions/download-artifact"
-        versions: ["7.x"]
+        versions: ["6.x", "7.x"]
       - dependency-name: "actions/upload-artifact"
-        versions: ["7.x"]
+        versions: ["5.x", "6.x", "7.x"]
