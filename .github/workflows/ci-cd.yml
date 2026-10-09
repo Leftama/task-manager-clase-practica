@@ -163,7 +163,7 @@ jobs:
 
       - name: Verificar despliegue (Health Check)
         run: |
-          curl --fail --retry 5 --retry-delay 5 http://localhost:8080/actuator/health
+          curl --fail --retry 5 --retry-delay 5 http://localhost:8088/actuator/health
 
       - name: Probar endpoint de tareas
         run: |
