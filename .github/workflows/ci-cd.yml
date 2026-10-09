@@ -167,7 +167,7 @@ jobs:
 
       - name: Probar endpoint de tareas
         run: |
-          curl --fail http://localhost:8080/api/tasks
+          curl --fail http://localhost:8088/api/tasks
 
       - name: Registrar trazabilidad del despliegue
         run: |
